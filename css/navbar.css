@@ -1,0 +1,38 @@
+
+#cssbuttons
+{
+	width: 180px;
+	text-align: center;
+}
+
+#cssbuttons ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#cssbuttons li
+{
+	margin: 0;
+	padding: 0;
+	display: block;
+	list-style: none;
+	font-family: Arial, Helvetica, sans-seriF;
+}
+
+#cssbuttons li a
+{
+	color: #000;
+	background-color: #9CF;
+	border: 1px outset #00F;
+	text-decoration: none;
+	display: block;
+}
+
+#cssbuttons li a:hover
+{
+	color: #FF0;
+	background-color: #0000C0;
+}
+

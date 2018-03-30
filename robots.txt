@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /module/
+Disallow: /files/
+Disallow: /css/
+Disallow: /js/
+Disallow: /py/
+
+User-agent: Googlebot-Image
+Disallow: /

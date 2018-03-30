@@ -1,0 +1,96 @@
+html
+{
+	height: 100%;
+}
+
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+}
+
+div
+{
+	height: 100%;
+}
+
+img
+{
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+div#navcol
+{
+	float: left;
+	width: 13%;
+	height: 100%;
+	color: #000;
+	background-color: #2BE;
+}
+
+div#content
+{
+	float: left;
+	width: 83%;
+	color: #000;
+	background-color: #FFF;
+}
+
+div#sidecol
+{
+	float: right;
+	width: 4%;
+	color: #000;
+	background-color: #FFF;
+}
+
+@media only screen and (max-width: 640px)
+{
+	div#navcol
+	{
+		float: none;
+		width: 100%;
+	}
+
+		div#content
+	{
+		float: none;
+		width: 100%;
+	}
+	div#sidecol
+	{
+		float: none;
+		width: 0%;
+	}
+}
+
+div#contproper, div#navproper, div#sideproper
+{
+	padding-top: 9px;
+	padding-left: 9px;
+	padding-right: 9px;
+}
+
+div#container
+{
+	color: inherit;
+	background-color: #FFF;
+}
+
+div#header
+{
+	font-size: 85%;
+	text-align: center;
+	height: 4.5%; /* any less breaks mobile site */
+	color: #000;
+	background-color: #2BE;
+}
+
+div#footer
+{
+	clear: both;
+	color: #000;
+	background-color: #FFF;
+}
