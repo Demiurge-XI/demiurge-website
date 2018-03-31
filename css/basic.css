@@ -24,7 +24,7 @@ img
 div#navcol
 {
 	float: left;
-	width: 13%;
+	width: auto;
 	height: 100%;
 	color: #000;
 	background-color: #2BE;
@@ -32,13 +32,13 @@ div#navcol
 
 div#content
 {
-	float: left;
-	width: 83%;
+	float: none;
+	width: auto;
 	color: #000;
 	background-color: #FFF;
 }
 
-div#sidecol
+div#sidecol /* this needs fixed (or layout scrapped/redone) before we can use it for listing online players.. */
 {
 	float: right;
 	width: 4%;
@@ -54,11 +54,12 @@ div#sidecol
 		width: 100%;
 	}
 
-		div#content
+	div#content
 	{
 		float: none;
 		width: 100%;
 	}
+
 	div#sidecol
 	{
 		float: none;
@@ -66,11 +67,25 @@ div#sidecol
 	}
 }
 
-div#contproper, div#navproper, div#sideproper
+div#navproper
 {
 	padding-top: 9px;
-	padding-left: 9px;
-	padding-right: 9px;
+	padding-left: 3px;
+	padding-right: 5px;
+}
+
+div#contproper
+{
+	padding-top: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div#sideproper
+{
+	padding-top: 9px;
+	padding-left: 5px;
+	padding-right: 3px;
 }
 
 div#container
@@ -83,7 +98,7 @@ div#header
 {
 	font-size: 85%;
 	text-align: center;
-	height: 4.5%; /* any less breaks mobile site */
+	height: 4.8%; /* any less breaks mobile site */
 	color: #000;
 	background-color: #2BE;
 }
