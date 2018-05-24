@@ -1,0 +1,25 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+header {
+	background-color: red;
+}
+header > div {
+	text-align: center;
+}
+body > div > div > div > nav {
+	background-color: blue;
+}
+body > div > div > div > main {
+	background-color: green;
+}
+body > div > div > footer {
+	background-color: yellow;
+}
+body > div > aside {
+	background-color: purple;
+}
+span {
+	background: white;
+}
