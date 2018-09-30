@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /module/
 Disallow: /files/
+Disallow: /tool/
 Disallow: /css/
 Disallow: /js/
 Disallow: /py/

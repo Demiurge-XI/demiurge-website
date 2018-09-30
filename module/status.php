@@ -10,6 +10,6 @@ if (!is_resource($sk))
 }
 else
 {
-	echo '<span style="color:#008000;"><strong>ONLINE</strong></span>';
+	echo '<span style="color:#00C000;"><strong>ONLINE</strong></span>';
 }
 ?>
