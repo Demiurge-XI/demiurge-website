@@ -78,16 +78,14 @@
 	else
 	{
 		echo '<strong>online player roster :  work in progress</strong><br>';
-		$mLvl = '';
-		$sLvl = '';
 		// $resultCount = mysqli_num_rows($dbq);
 		echo '<style>table, th, td { padding: 3px }</style>';
-		echo '<table border = 1; style="border-collapse: collapse;">';
+		echo '<table border = 1; style="border-collapse: collapse; font-family: Consolas;">';
 		// echo '<tr><td><strong>There are <span style="color:#00C000;">', $resultCount, '</span><br>Players Online</strong></td></tr>';
 		echo '<tr>';
 		echo '<td><strong> Character </strong></td>';
-		echo '<td><strong> Main &nbsp (LV) </strong></td>';
-		echo '<td><strong> Sub &nbsp (LV) </strong></td>';
+		echo '<td><strong> Main (LV) </strong></td>';
+		echo '<td><strong> Sub (LV) </strong></td>';
 		// echo '<td><strong> Area </strong></td>';
 		echo '<td><strong> Bazaar Message </strong></td>';
 		echo '</tr>';
@@ -99,16 +97,24 @@
 			{
 				$mLvl = '('. $player["mlvl"] .')';
 			}
+			else
+			{
+				$mLvl = '';
+			}
 
 			if ($player["slvl"] > 0)
 			{
 				$sLvl = '('. $player["slvl"] .')';
 			}
+			else
+			{
+				$sLvl = '';
+			}
 
 			echo '<tr>';
 			echo '<td>', $player["charname"], '</td>';
-			echo '<td>', $jobClassIDs[$player["mjob"]], ' &nbsp ', $mLvl, '</td>';
-			echo '<td>', $jobClassIDs[$player["sjob"]], ' &nbsp ', $sLvl, '</td>';
+			echo '<td>', $jobClassIDs[$player["mjob"]], ' ', $mLvl, '</td>';
+			echo '<td>', $jobClassIDs[$player["sjob"]], ' ', $sLvl, '</td>';
 			// echo '<td>', $player["name"], '</td>';
 			echo '<td>', $player["bazaar_message"], '</td>';
 			echo '</tr>';
