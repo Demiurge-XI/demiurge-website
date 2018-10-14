@@ -77,26 +77,42 @@
 	}
 	else
 	{
-		echo '<strong>', 'online player roster :  work in progress', '</strong><br>';
-		$resultCount = mysqli_num_rows($dbq);
-		echo "<table>";
-		echo '<tr><td><strong>There are <span style="color:#00C000;">', $resultCount, '</span><br>Players Online</strong></td></tr>';
+		echo '<strong>online player roster :  work in progress</strong><br>';
+		$mLvl = '';
+		$sLvl = '';
+		// $resultCount = mysqli_num_rows($dbq);
+		echo '<style>table, th, td { padding: 3px }</style>';
+		echo '<table border = 1; style="border-collapse: collapse;">';
+		// echo '<tr><td><strong>There are <span style="color:#00C000;">', $resultCount, '</span><br>Players Online</strong></td></tr>';
+		echo '<tr>';
+		echo '<td><strong> Character </strong></td>';
+		echo '<td><strong> Main &nbsp (LV) </strong></td>';
+		echo '<td><strong> Sub &nbsp (LV) </strong></td>';
+		// echo '<td><strong> Areas </strong></td>';
+		echo '<td><strong> Bazaar Message </strong></td>';
+		echo '</tr>';
+		//echo '<tr><td colspan="4"><hr></td></tr>';
 
 		foreach ($roster as &$player)
 		{
+			if ($player["mlvl"] > 0)
+			{
+				$mLvl = '('. $player["mlvl"] .')';
+			}
+
+			if ($player["slvl"] > 0)
+			{
+				$sLvl = '('. $player["slvl"] .')';
+			}
+
 			echo '<tr>';
-			echo '<td>', $player["charname"], ' ', '</td>';
-			echo '<td>&nbsp</td>';
-			echo '<td>', $jobClassIDs[$player["mjob"]], '</td>';
-			echo '<td>', '(', $player["mlvl"], ')', '</td>';
-			echo '<td>', ' / ', '</td>';
-			echo '<td>', $jobClassIDs[$player["sjob"]], '</td>';
-			echo '<td>', '(', $player["slvl"], ')', '</td>';
-			echo '<td>&nbsp</td>';
-			// echo '<td>', '[', $player["zone_settings.name"], ']', '</td>';
+			echo '<td>', $player["charname"], '</td>';
+			echo '<td>', $jobClassIDs[$player["mjob"]], ' &nbsp ', $mLvl, '</td>';
+			echo '<td>', $jobClassIDs[$player["sjob"]], ' &nbsp ', $sLvl, '</td>';
+			// echo '<td>', $player["zone_settings.name"], '</td>';
 			echo '<td>', $player["bazaar_message"], '</td>';
 			echo '</tr>';
 		}
-		echo "</table>";
+		echo '</table>';
 	}
 ?>
