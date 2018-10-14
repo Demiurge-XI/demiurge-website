@@ -88,7 +88,7 @@
 		echo '<td><strong> Character </strong></td>';
 		echo '<td><strong> Main &nbsp (LV) </strong></td>';
 		echo '<td><strong> Sub &nbsp (LV) </strong></td>';
-		// echo '<td><strong> Areas </strong></td>';
+		// echo '<td><strong> Area </strong></td>';
 		echo '<td><strong> Bazaar Message </strong></td>';
 		echo '</tr>';
 		//echo '<tr><td colspan="4"><hr></td></tr>';
@@ -109,7 +109,7 @@
 			echo '<td>', $player["charname"], '</td>';
 			echo '<td>', $jobClassIDs[$player["mjob"]], ' &nbsp ', $mLvl, '</td>';
 			echo '<td>', $jobClassIDs[$player["sjob"]], ' &nbsp ', $sLvl, '</td>';
-			// echo '<td>', $player["zone_settings.name"], '</td>';
+			// echo '<td>', $player["name"], '</td>';
 			echo '<td>', $player["bazaar_message"], '</td>';
 			echo '</tr>';
 		}
