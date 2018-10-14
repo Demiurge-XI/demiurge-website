@@ -80,7 +80,7 @@
 		echo '<strong>online player roster :  work in progress</strong><br>';
 		// $resultCount = mysqli_num_rows($dbq);
 		echo '<style>table, th, td { padding: 3px }</style>';
-		echo '<table border = 1; style="border-collapse: collapse; font-family: Consolas;">';
+		echo '<table border = 1; style="border-collapse: collapse; font-family: Consolas, Droid Sans Mono, Courier, Monospaced;">';
 		// echo '<tr><td><strong>There are <span style="color:#00C000;">', $resultCount, '</span><br>Players Online</strong></td></tr>';
 		echo '<tr>';
 		echo '<td><strong> Character </strong></td>';
