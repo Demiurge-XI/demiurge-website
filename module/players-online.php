@@ -98,14 +98,7 @@
 		foreach ($roster as &$player)
 		{
 			// Misc variables
-			$mLvl = '';
 			$sLvl = '';
-
-			// set main lv string
-			if ($player["mlvl"] > 0)
-			{
-				$mLvl = '('. $player["mlvl"] .')';
-			}
 
 			// set sub lv string
 			if ($player["slvl"] > 0)
@@ -119,7 +112,7 @@
 			// Build the row
 			echo '<tr>';
 			echo '<td>', $player["charname"], '</td>';
-			echo '<td>', $jobClassIDs[$player["mjob"]], ' ', $mLvl, '</td>';
+			echo '<td>', $jobClassIDs[$player["mjob"]], ' ', $player["mlvl"], '</td>';
 			echo '<td>', $jobClassIDs[$player["sjob"]], ' ', $sLvl, '</td>';
 			// echo '<td>', $player["name"], '</td>';
 			echo '<td>', $baz, '</td>';
