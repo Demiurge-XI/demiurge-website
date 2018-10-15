@@ -80,8 +80,6 @@
 		echo '<strong>online player roster :  work in progress</strong><br>';
 
 		// $resultCount = mysqli_num_rows($dbq);
-		$mLvl = '';
-		$sLvl = '';
 
 		// begin table build
 		echo '<style>table, th, td { padding: 3px }</style>';
@@ -99,6 +97,10 @@
 		// loop through player list
 		foreach ($roster as &$player)
 		{
+			// Misc variables
+			$mLvl = '';
+			$sLvl = '';
+
 			// set main lv string
 			if ($player["mlvl"] > 0)
 			{
@@ -123,6 +125,7 @@
 			echo '<td>', $baz, '</td>';
 			echo '</tr>';
 		}
+
 		echo '</table>';
 	}
 ?>
