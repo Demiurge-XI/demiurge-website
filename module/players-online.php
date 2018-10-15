@@ -112,7 +112,7 @@
 			// Build the row
 			echo '<tr>';
 			echo '<td>', $player["charname"], '</td>';
-			echo '<td>', $jobClassIDs[$player["mjob"]], ' ', $player["mlvl"], '</td>';
+			echo '<td>', $jobClassIDs[$player["mjob"]], ' (', $player["mlvl"], ') </td>';
 			echo '<td>', $jobClassIDs[$player["sjob"]], ' ', $sLvl, '</td>';
 			// echo '<td>', $player["name"], '</td>';
 			echo '<td>', $baz, '</td>';
