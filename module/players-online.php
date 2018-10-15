@@ -78,7 +78,12 @@
 	else
 	{
 		echo '<strong>online player roster :  work in progress</strong><br>';
+
 		// $resultCount = mysqli_num_rows($dbq);
+		$mLvl = '';
+		$sLvl = '';
+
+		// begin table build
 		echo '<style>table, th, td { padding: 3px }</style>';
 		echo '<table border = 1; style="border-collapse: collapse; font-family: Consolas, Courier, \'Droid Sans Mono\', Monospaced;">';
 		// echo '<tr><td><strong>There are <span style="color:#00C000;">', $resultCount, '</span><br>Players Online</strong></td></tr>';
@@ -91,32 +96,31 @@
 		echo '</tr>';
 		//echo '<tr><td colspan="4"><hr></td></tr>';
 
+		// loop through player list
 		foreach ($roster as &$player)
 		{
+			// set main lv string
 			if ($player["mlvl"] > 0)
 			{
 				$mLvl = '('. $player["mlvl"] .')';
 			}
-			else
-			{
-				$mLvl = '';
-			}
 
+			// set sub lv string
 			if ($player["slvl"] > 0)
 			{
 				$sLvl = '('. $player["slvl"] .')';
 			}
-			else
-			{
-				$sLvl = '';
-			}
 
+			// sanitize bazaar msg text
+			$baz = htmlspecialchars($player["bazaar_message"], ENT_QUOTES);
+
+			// Build the row
 			echo '<tr>';
 			echo '<td>', $player["charname"], '</td>';
 			echo '<td>', $jobClassIDs[$player["mjob"]], ' ', $mLvl, '</td>';
 			echo '<td>', $jobClassIDs[$player["sjob"]], ' ', $sLvl, '</td>';
 			// echo '<td>', $player["name"], '</td>';
-			echo '<td>', $player["bazaar_message"], '</td>';
+			echo '<td>', $baz, '</td>';
 			echo '</tr>';
 		}
 		echo '</table>';
