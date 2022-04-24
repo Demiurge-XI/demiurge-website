@@ -87,7 +87,7 @@
 		// echo '<tr><td><strong>There are <span style="color:#00C000;">', $resultCount, '</span><br>Players Online</strong></td></tr>';
 		echo '<tr>';
 		echo '<td><strong> Character </strong></td>';
-		echo '<td><strong> Main (LV) </strong></td>';
+		echo '<td><strong> Main(LV) </strong></td>';
 		echo '<td><strong> Sub (LV) </strong></td>';
 		// echo '<td><strong> Area </strong></td>';
 		echo '<td><strong> Bazaar Message </strong></td>';
@@ -106,8 +106,9 @@
 				$sLvl = '('. $player["slvl"] .')';
 			}
 
-			// sanitize bazaar msg text
+			// sanitize bazaar and seacom msg text
 			$baz = htmlspecialchars($player["bazaar_message"], ENT_QUOTES);
+			// $scom = htmlspecialchars($player["seacom_message"], ENT_QUOTES);
 
 			// Build the row
 			echo '<tr>';
@@ -116,8 +117,22 @@
 			echo '<td>', $jobClassIDs[$player["sjob"]], ' ', $sLvl, '</td>';
 			// echo '<td>', $player["name"], '</td>';
 			echo '<td>', $baz, '</td>';
+			// echo '<td>', $scom, '</td>';
 			echo '</tr>';
 		}
+
+
+		// $queryCount = db_query("SELECT * FROM accounts_sessions;");
+		// $resultCount = mysqli_num_rows($queryCount);
+		// if ($resultCount > 0 )
+		// {
+		// 	echo '<tr>';
+		// 	echo '<td> Sauronwatchingu </td>';
+		// 	echo '<td> BOT (75) </td>';
+		// 	echo '<td> MON (50) </td>';
+		// 	// echo '<td> --- </td>';
+		// 	echo '<td> I SEE YOU </td>';
+		// }
 
 		echo '</table>';
 	}

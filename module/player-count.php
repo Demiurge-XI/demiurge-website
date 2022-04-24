@@ -26,10 +26,17 @@
 
 	// TODO: move above functions to a common location for use in multiple scripts.
 
-	// TODO: fix queryUnique, it's wrong.
+	// TODO: fix this, it's wrong.
+	// $queryCount = db_query("SELECT COUNT(*) FROM accounts_sessions;");
+	// $row = $queryCount->fetch_row();
+	// $resultCount = $row[0];
 	$queryCount = db_query("SELECT * FROM accounts_sessions;");
 	$resultCount = mysqli_num_rows($queryCount);
-	// $queryUnique = db_query("SELECT DISTINCT(client_addr) FROM accounts_sessions;");
+	// if ($resultCount > 0 )
+	// {
+	// 	$resultCount = $resultCount+1;
+	// }
+	// $queryUnique = db_query("SELECT DISTINCT client_addr AS uniqueonlinecount FROM accounts_sessions;");
 	// $resultUnique = mysqli_num_rows($queryUnique)
 	//if ($queryCount === false || $queryUnique === false)
 	if ($queryCount === false)

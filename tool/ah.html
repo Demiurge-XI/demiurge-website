@@ -2,11 +2,17 @@
 <html>
 	<head>
 		<title>Auction Lookup Tool</title>
+		<!--#include virtual="/module/common_head.html" -->
 	</head>
 
 	<body>
 		<!--#include virtual="/module/nav.html" -->
 		<br>
-		<!--#include virtual="/module/ah_tool.php" -->
+		<!-- Join item_basic with auction_house on itemid and match input to name OR sortname -->
+		Work in progress. None of the tools are finished yet.
+		<form action="/module/ah.php" method="get">
+		Item Name: <input type="text" name="name"><br>
+		<input type="submit">
+		</form>
 	</body>
 </html>
