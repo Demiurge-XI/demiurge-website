@@ -1,5 +1,5 @@
 ## About this project:
-* This repository houses most of the website code for the Demiurge DSP server.
+* This repository houses most of the website code for the Demiurge LSB server.
 
 ## Code Contribution Guidelines:
 * Wherever possible, stick to CSS and PHP solutions. Keep the javascript to a minimum.
