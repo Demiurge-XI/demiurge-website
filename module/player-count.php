@@ -5,7 +5,7 @@
 
 		if (!isset($connection))
 		{
-			$config = parse_ini_file('..\..\ffxidb\db_conf.ini');
+			$config = parse_ini_file('..\..\..\ffxidb\db_conf.ini');
 			$connection = mysqli_connect('localhost',$config['username'],$config['password'],$config['dbname']);
 		}
 
